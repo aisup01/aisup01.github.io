@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- แก้ตรงนี้ 1: ชื่อที่แสดงบนแท็บเบราว์เซอร์ -->
+<title>ชื่อของคุณ</title>
+<meta property="og:title" content="ชื่อของคุณ">
+<meta property="og:description" content="ติดตามได้ที่ Facebook">
+<style>
+  /* เปลี่ยนสีทั้งหน้าได้ที่ 5 บรรทัดนี้ (ใส่รหัสสี เช่น #1b8a4b) */
+  :root {
+    --bg: #eaf6ee;        /* สีพื้นหลัง */
+    --card: #ffffff;      /* สีการ์ดกลาง */
+    --main: #1b8a4b;      /* สีเขียวหลัก (ปุ่ม) */
+    --main-dark: #146c3a; /* สีปุ่มตอนเอาเมาส์ชี้/กด */
+    --text: #17301f;      /* สีตัวอักษร */
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", "Noto Sans Thai", "Sarabun", Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+  }
+  main {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    border-radius: 24px;
+    padding: 32px 20px 28px;
+    box-shadow: 0 6px 24px rgba(20, 108, 58, 0.12);
+    text-align: center;
+    align-self: flex-start;
+  }
+  .avatar {
+    width: 96px; height: 96px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: var(--main);
+    color: #fff;
+    font-size: 40px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  h1 { font-size: 22px; margin: 0 0 6px; }
+  .bio { margin: 0 0 24px; font-size: 15px; line-height: 1.5; opacity: 0.8; }
+  .links { display: flex; flex-direction: column; gap: 12px; }
+  .links a {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 15px 16px;
+    border-radius: 14px;
+    background: var(--main);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; font-weight: 600;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .links a:hover, .links a:focus-visible { background: var(--main-dark); transform: translateY(-1px); }
+  .links svg { width: 22px; height: 22px; fill: #fff; flex: none; }
+</style>
+</head>
+<body>
+<main>
+
+  <!-- แก้ตรงนี้ 2: ตัวอักษรในวงกลม (ใส่ตัวแรกของชื่อ)
+       ถ้ามีรูปโปรไฟล์ ให้อัปโหลดไฟล์ชื่อ profile.jpg ไว้ข้าง index.html
+       แล้วเปลี่ยนบรรทัดข้างล่างเป็น: <div class="avatar"><img src="profile.jpg" alt="รูปโปรไฟล์"></div> -->
+  <div class="avatar">ช</div>
+
+  <!-- แก้ตรงนี้ 3: ชื่อและข้อความแนะนำตัว -->
+  <h1>ชื่อของคุณ</h1>
+  <p class="bio">ข้อความแนะนำตัวสั้น ๆ</p>
+
+  <!-- แก้ตรงนี้ 4: ลิงก์ Facebook 3 อัน
+       เปลี่ยนที่อยู่ใน href="..." เป็นลิงก์ของคุณ และเปลี่ยนข้อความบนปุ่ม -->
+  <nav class="links">
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.09 24 12.07z"/></svg>
+      Facebook ลิงก์ที่ 1
+    </a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.09 24 12.07z"/></svg>
+      Facebook ลิงก์ที่ 2
+    </a>
+    <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.09 24 12.07z"/></svg>
+      Facebook ลิงก์ที่ 3
+    </a>
+  </nav>
+
+</main>
+</body>
+</html>
